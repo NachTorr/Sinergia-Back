@@ -1,23 +1,5 @@
+import { IsString, IsOptional, MinLength, IsIn } from 'class-validator';
 import { UserStatus } from '../user.entity';
-import {
-  IsIn,
-  IsNotEmpty,
-  IsOptional,
-  IsString,
-  MinLength,
-} from 'class-validator';
-
-export class CreateUserDto {
-  @IsString()
-  @IsNotEmpty()
-  @MinLength(3)
-  name: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @MinLength(3)
-  email: string;
-}
 
 export class UpdateUserDto {
   @IsString()
